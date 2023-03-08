@@ -1,5 +1,5 @@
 <div *ngIf="viewMode; else editable">
-  <div *ngIf="currentTutorial.id">
+  <div *ngIf="currentTutorial?.id">
     <h4>Tutorial</h4>
     <div>
       <label><strong>Title:</strong></label> {{ currentTutorial.title }}
@@ -21,14 +21,14 @@
     </a>
   </div>
 
-  <div *ngIf="!currentTutorial">
+  <div *ngIf="!currentTutorial.id">
     <br />
     <p>Please click on a Tutorial...</p>
   </div>
 </div>
 
 <ng-template #editable>
-  <div *ngIf="currentTutorial.id" class="edit-form">
+  <div *ngIf="currentTutorial?.id" class="edit-form">
     <h4>Tutorial</h4>
     <form>
       <div class="form-group">
@@ -87,7 +87,7 @@
     <p>{{ message }}</p>
   </div>
 
-  <div *ngIf="!currentTutorial.id">
+  <div *ngIf="!currentTutorial?.id">
     <br />
     <p>Cannot access this Tutorial...</p>
   </div>

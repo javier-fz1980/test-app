@@ -24,7 +24,11 @@
         />
       </div>
 
-      <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+      <button (click)="saveTutorial()"
+              [disabled]="!tutorial.title || !tutorial.description"
+              class="btn btn-success">
+        Submit
+      </button>
     </div>
 
     <div *ngIf="submitted">

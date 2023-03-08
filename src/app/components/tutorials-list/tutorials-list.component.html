@@ -10,6 +10,7 @@
       <div class="input-group-append">
         <button
           class="btn btn-outline-secondary"
+          (click)="searchByTitle()"
         >
           Search
         </button>
@@ -21,10 +22,13 @@
     <ul class="list-group">
       <li
         class="list-group-item"
+        [ngClass]="{ selected: currentIndex === i }"
         *ngFor="let tutorial of tutorials; let i = index"
         [class.active]="i == currentIndex"
       >
-        {{ tutorial.title }}
+        <div class="list-item-content" (click)="selectTutorial(i)">
+          {{ tutorial.title }}
+        </div>
       </li>
     </ul>
 
