@@ -10,6 +10,6 @@ Modify/Complete the codebase to perform the following:
 - Implement selection to highlight any tutorial that is clicked
 
 
-Please Note:
+Please Note
 
 The use of best general programming practices as well as angular specific good practices will be a key criteria for assessment.
